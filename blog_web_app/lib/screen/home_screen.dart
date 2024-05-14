@@ -12,16 +12,24 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.orange,
         title: Text('Code Factory'),
         centerTitle: true,
-        //앱바의 액션 매개변수
-        actions: [
-          //아이콘 버튼을 누르면 함수 실행
-          IconButton(onPressed: () {
+        leading: IconButton( //leading 속성은 앱 바(AppBar)의 가장 왼쪽에 위치할 위젯을 정의하는 데 사용
+          icon: Icon(Icons.home),
+          onPressed: () {
             if (controller != null) {
               controller!.loadUrl('https://blog.codefactory.ai');
             }
+          },
+        ),
+        //앱바의 액션 매개변수
+        actions: [
+          //아이콘 버튼을 누르면 함수 실행
+          IconButton(onPressed:  () async {
+            if (controller != null && await controller!.canGoBack()) {
+              controller!.goBack();
+            }
           }, icon: Icon( //홈버튼 아이콘
-            Icons.home,
-          ))
+            Icons.undo,
+          )),
         ],
       ),
       body: WebView(
