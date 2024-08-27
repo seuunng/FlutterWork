@@ -16,14 +16,13 @@ class MainCalendar extends StatelessWidget {
     return TableCalendar(
       locale: 'ko_kr',
       onDaySelected: onDaySelected,
-      selectedDayPredicate: (date)=>
-        date.year == selectedDate.year &&
-        date.month == selectedDate.month &&
-        date.day == selectedDate.day,
+      selectedDayPredicate: (date) =>
+          date.year == selectedDate.year &&
+          date.month == selectedDate.month &&
+          date.day == selectedDate.day,
       firstDay: DateTime(188, 1, 1),
       lastDay: DateTime(3000, 1, 1),
       focusedDay: DateTime.now(),
-
       headerStyle: HeaderStyle(
         titleCentered: true,
         formatButtonVisible: false,
@@ -48,19 +47,19 @@ class MainCalendar extends StatelessWidget {
             color: PRIMARY_COLOR,
             width: 1.0,
           ),
-      ),
-      defaultTextStyle: TextStyle(
-        fontWeight: FontWeight.w600,
-        color: DARK_GREY_COLOR,
-      ),
-      weekendTextStyle: TextStyle(
-        fontWeight: FontWeight.w600,
-        color: DARK_GREY_COLOR,
-      ),
-      selectedTextStyle: TextStyle(
-        fontWeight: FontWeight.w600,
-        color: PRIMARY_COLOR,
-      ),
+        ),
+        defaultTextStyle: TextStyle(
+          fontWeight: FontWeight.w600,
+          color: DARK_GREY_COLOR,
+        ),
+        weekendTextStyle: TextStyle(
+          fontWeight: FontWeight.w600,
+          color: DARK_GREY_COLOR,
+        ),
+        selectedTextStyle: TextStyle(
+          fontWeight: FontWeight.w600,
+          color: PRIMARY_COLOR,
+        ),
       ),
     );
   }
