@@ -18,6 +18,15 @@ class ScheduleProvider extends ChangeNotifier {
     getSchedules(date: selectedDate);
   }
 
+
+  DateTime _selectedDate = DateTime.now();
+
+  void changeSelectedDate({required DateTime date}) {
+    _selectedDate = date;
+    notifyListeners();
+  }
+
+
   void getSchedules({
     required DateTime date,
   }) async {
@@ -103,4 +112,6 @@ class ScheduleProvider extends ChangeNotifier {
     }
     notifyListeners();
   }
+
+  
 }
