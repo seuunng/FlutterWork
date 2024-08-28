@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "834919745048",
+    "project_id": "innate-watch-425605-r9",
+    "storage_bucket": "innate-watch-425605-r9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834919745048:android:3ecc5ac9903c1aa88c656d",
+        "android_client_info": {
+          "package_name": "com.example.calendar_scheduler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834919745048-tiu8j0gnrtsl3f72m5cdkbsk05basoqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3NaDyJrZ9nDFjXz_RaFsH3dPObCPyX-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834919745048-tiu8j0gnrtsl3f72m5cdkbsk05basoqo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "834919745048-lbioc7aae3fr8lfibknt437ppqhs9d6r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.calendarScheduler"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
