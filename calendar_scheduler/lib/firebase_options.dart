@@ -66,4 +66,5 @@ class DefaultFirebaseOptions {
     iosClientId: '834919745048-lbioc7aae3fr8lfibknt437ppqhs9d6r.apps.googleusercontent.com',
     iosBundleId: 'com.example.calendarScheduler',
   );
+
 }

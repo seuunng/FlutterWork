@@ -1,3 +1,4 @@
+import 'package:calendar_scheduler/component/banner_ad_widget.dart';
 import 'package:calendar_scheduler/component/schedule_bottom_sheet.dart';
 import 'package:calendar_scheduler/component/schedule_card.dart';
 import 'package:calendar_scheduler/component/todayBanner.dart';
@@ -147,8 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           json: (e.data() as Map<String, dynamic>)),
                 ).toList();
 
-                return ListView.builder(
+                return ListView.separated(
                   itemCount: schedules.length,
+                  separatorBuilder: (context, index) {
+                    return BannerAdWidget();
+                  },
                   itemBuilder: (context, index) {
                     final schedule = schedules[index];
                     return Dismissible(

@@ -2,6 +2,7 @@ import 'package:calendar_scheduler/provider/schedule_provider.dart';
 import 'package:calendar_scheduler/repository/schedule_repository.dart';
 import 'package:calendar_scheduler/screen/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -12,6 +13,7 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  MobileAds.instance.initialize();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -25,16 +27,12 @@ void main() async {
   // final repository = ScheduleRepository();
   // final scheduleProvider = ScheduleProvider(repository: repository);
   runApp(
-    // ChangeNotifierProvider(
-    //   create: (_) => scheduleProvider,
-    //   child: MaterialApp(
-    //     home: HomeScreen(),
-    //   ),
-    // )
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen()
-    )
-  );
+      // ChangeNotifierProvider(
+      //   create: (_) => scheduleProvider,
+      //   child: MaterialApp(
+      //     home: HomeScreen(),
+      //   ),
+      // )
+      MaterialApp(debugShowCheckedModeBanner: false,
+          home: HomeScreen()));
 }
-
